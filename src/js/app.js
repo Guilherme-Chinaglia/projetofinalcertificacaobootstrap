@@ -13,7 +13,7 @@ $(function(){
 
 //Google Charts
 
-//Charts
+//Projects
 google.charts.load("current", {packages:["corechart"]});
 google.charts.setOnLoadCallback(drawChartProjects);
 	function drawChartProjects() {
@@ -39,7 +39,7 @@ google.charts.setOnLoadCallback(drawChartProjects);
         var chart = new google.visualization.PieChart(document.getElementById('drawChartProjects'));
         chart.draw(data, options);
     }
-
+//Running
 google.charts.setOnLoadCallback(drawChartRunning);
 	function drawChartRunning() {
     var data = google.visualization.arrayToDataTable([
@@ -61,3 +61,15 @@ google.charts.setOnLoadCallback(drawChartRunning);
       var chart = new google.visualization.BarChart(document.getElementById('drawChartRunning'));
         chart.draw(data, options);
     }
+//Animated Number    
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});

@@ -8,6 +8,9 @@
 @import "header";
 
 //main
+article{
+	margin-bottom: 2rem;	
+}
 
 .card-header{
 	padding-top: .2rem;
@@ -17,10 +20,17 @@
 .card-block{
 	margin: 0 auto;
 	padding-bottom: 0;
+	
+	.warning{
+		padding-bottom: 1.25rem;
+		font-size: 5rem;
+		
+		color: $brand-warning;	
+	}
 }
 
 .card-footer{
-		
+		display: flex;
 
 		.nav{
 			flex-direction: column;
@@ -41,6 +51,16 @@
 
 			&.warning{
 				background-color: $brand-warning;
+			}
 		}
-	}
+
+		.following,
+		.followers{
+			margin: 0 auto;	
+				> span{
+					display: block;
+					text-align: center;
+				}
+		}
+
 }
