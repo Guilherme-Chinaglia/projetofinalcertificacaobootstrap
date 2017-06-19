@@ -1,0 +1,46 @@
+@import "../components/bootstrap/scss/bootstrap";
+@import "../components/components-font-awesome/scss/font-awesome";
+
+//Sidebar
+@import "sidebar";
+
+//Header
+@import "header";
+
+//main
+
+.card-header{
+	padding-top: .2rem;
+	padding-bottom: 0;
+}
+
+.card-block{
+	margin: 0 auto;
+	padding-bottom: 0;
+}
+
+.card-footer{
+		
+
+		.nav{
+			flex-direction: column;
+		}
+		
+		.badge{
+			width: 14px;
+			height: 14px;
+			display: inline-block;
+				
+			&.primary{
+				background-color: $brand-primary;
+			}
+
+			&.info{
+				background-color: $brand-info;
+			}
+
+			&.warning{
+				background-color: $brand-warning;
+		}
+	}
+}
