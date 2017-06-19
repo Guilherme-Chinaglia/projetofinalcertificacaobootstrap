@@ -25,7 +25,6 @@ google.charts.setOnLoadCallback(drawChartProjects);
         ]);
 
         var options = {
-          title: 'Projects Status',
           pieHole: 0.4,
           width: 278,
           height: 278,
@@ -44,7 +43,7 @@ google.charts.setOnLoadCallback(drawChartProjects);
 google.charts.setOnLoadCallback(drawChartRunning);
 	function drawChartRunning() {
     var data = google.visualization.arrayToDataTable([
-        ['Dates', 'Start Date', 'Days Completed', 'Days Remaining', { role: 'annotation' }],
+        ['Airports', 'Start Date', 'Days Completed', 'Days Remaining', { role: 'annotation' }],
         ['Airport Rail', 5, 5, 5, ''],
         ['Roy Hill', 5, 5, 5, ''],
         ['Moolarben', 5, 5, 5, '']
@@ -55,7 +54,8 @@ google.charts.setOnLoadCallback(drawChartRunning);
         height: 278,
         legend: { position: 'top', maxLines: 3 },
         bar: { groupWidth: '75%' },
-        isStacked: true
+        isStacked: true,
+        colors: ['#57b0eb', '#fc8f3e', '#293541']
       };
 
       var chart = new google.visualization.BarChart(document.getElementById('drawChartRunning'));
