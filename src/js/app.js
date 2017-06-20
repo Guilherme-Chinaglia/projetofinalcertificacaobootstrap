@@ -61,15 +61,58 @@ google.charts.setOnLoadCallback(drawChartRunning);
       var chart = new google.visualization.BarChart(document.getElementById('drawChartRunning'));
         chart.draw(data, options);
     }
+//Invoice status
+google.charts.setOnLoadCallback(drawChartInvoice);
+  function drawChartInvoice() {
+    var data = google.visualization.arrayToDataTable([
+          ['Mês', 'Days Completed', 'Days Remaining'],
+          ['Junho',  1000,      400],
+          ['Julho',  1170,      460],
+          ['Agosto',  660,      1120]
+        ]);
+
+      var options = {
+          curveType: 'function',
+          legend: { position: 'top' },
+          width: 278,
+          height: 278,
+           colors: ['#57b0eb', '#fc8f3e']
+        };
+
+      var chart = new google.visualization.LineChart(document.getElementById('drawChartInvoice'));
+        chart.draw(data, options);
+    }
+
+
 //Animated Number    
-$('.count').each(function () {
-    $(this).prop('Counter',0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+var a = 0;
+$(window).scroll(function() {
+
+  var oTop = $('.item').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.count').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 5000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
     });
+    a = 1;
+  }
 });

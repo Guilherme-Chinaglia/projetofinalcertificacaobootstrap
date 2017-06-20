@@ -160,20 +160,47 @@
 				</div><!-- card-block -->
 				<footer>
 					<div class="card-footer">
-						<div class="following">
+						<div class="item">
 							<span>Following</span>
-							<span class="warning count">1800</span>
+							<span class="warning count" data-count="1800">0</span>
 						</div>
-						<div class="followers">
+						<div class="item">
 							<span>Followers</span>
-							<span class="info count">2100</span>
+							<span class="info count" data-count="2100">0</span>
 						</div>
 					</div><!-- card-footer -->		
 				</footer>
 			</div><!-- card -->
 		</article><!-- article contractors -->
+
+		<article>
+			<div class="card">
+				<header>
+					<div class="card-header">
+						<h2 class="card-title">Invoice status</h2>
+					</div><!-- card-header -->
+				</header>
+				<div class="card-block">
+					<div id="drawChartInvoice"></div><!-- div google chart -->
+				</div><!-- card-block -->
+				<footer>
+					<div class="card-footer">
+						<ul class="nav">
+							<li class="nav-item">
+								<span class="badge info"></span>
+								Paid: $65,000.00
+							</li>
+							<li class="nav-item">
+								<span class="badge warning"></span>
+								Paid: $50,500.00
+							</li>
+						</ul>
+					</div><!-- card-footer -->		
+				</footer>
+			</div><!-- card -->
+		</article><!-- article invoice status -->
 	</main>
-<script src="js/main.js"></script>	
-<script src="js/app.js"></script>
+<script src="js/main.js" async defer></script>	
+<script src="js/app.js" async defer></script>
 </body>
 </html>
