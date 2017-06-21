@@ -89,7 +89,7 @@ var a = 0;
 $(window).scroll(function() {
 
   var oTop = $('.item').offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
+  if (a === 0 && $(window).scrollTop() > oTop) {
     $('.count').each(function() {
       var $this = $(this),
         countTo = $this.attr('data-count');
