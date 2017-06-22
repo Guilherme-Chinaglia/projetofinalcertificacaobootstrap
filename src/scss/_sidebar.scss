@@ -68,3 +68,16 @@
 		left: 0;
 	}
 }
+
+
+/*Media Queries*/
+
+/* iPads (retrato e paisagem) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+	
+	.sidebar{
+		width: 40%;
+		
+	}
+}

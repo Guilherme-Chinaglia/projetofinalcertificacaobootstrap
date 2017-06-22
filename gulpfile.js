@@ -9,6 +9,7 @@ var del 		= require("del");
 var jshint		= require("gulp-jshint");
 var cssmin		= require("gulp-cssmin");
 var runSequence = require("run-sequence");
+var imagemin	= require("gulp-imagemin");
 
 /* Tasks cached */
 gulp.task("cache:css", function() {
@@ -19,19 +20,29 @@ gulp.task("cache:js", function() {
 	del("./dist/js/app.js")
 });
 
+gulp.task("cache:html", function(){
+	del(".dist/index.html")
+});
+
+/*Task minfy PNG, JPEG, GIF and SVG images*/
+gulp.task("imagemin", function(){
+	return gulp.src("src/img/*")
+			   .pipe(imagemin())
+			   .pipe(gulp.dest("dist/img"));
+});
+
+
 /* Task compile scss to css */
 gulp.task("sass", ['cache:css'], function() {
 	return gulp.src("./src/scss/style.scss")
-				.pipe(sass({outPutStyle: 'compressed'}))
-				.pipe(cssmin())
-				.on('error', notify.onError({title: "erro scss", message: "<%= error.message %>"}))
+				.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 				.pipe(gulp.dest("./dist/css"))
 				.pipe(browserSync.stream());
 });
 
 
 /* Task minify html */
-gulp.task("html", function() {
+gulp.task("html", ['cache:html'], function() {
 	return gulp.src("./src/index.html")
 				.pipe(htmlmin({collapseWhitespace: true}))
 				.pipe(gulp.dest("./dist"))
@@ -88,7 +99,7 @@ gulp.task("server", function() {
 });
 
 gulp.task("default", function(cb){
-	return runSequence(['sass', 'html', 'jshint', 'js', 'concat-js', 'move-fonts', 'server'], cb)
+	return runSequence(['imagemin', 'sass', 'html', 'jshint', 'js', 'concat-js', 'move-fonts', 'server'], cb)
 });
 
 
