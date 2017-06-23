@@ -28,6 +28,7 @@ google.charts.setOnLoadCallback(drawChartProjects);
           pieHole: 0.4,
           width: 278,
           height: 278,
+          backgroundColor: 'transparent',
           slices:{
           	0: {color: '#57b0eb'},
           	1: {color: '#fc8f3e'},
@@ -55,6 +56,7 @@ google.charts.setOnLoadCallback(drawChartRunning);
         legend: { position: 'top', maxLines: 3 },
         bar: { groupWidth: '75%' },
         isStacked: true,
+        backgroundColor: 'transparent',
         colors: ['#57b0eb', '#fc8f3e', '#293541']
       };
 
@@ -76,7 +78,8 @@ google.charts.setOnLoadCallback(drawChartInvoice);
           legend: { position: 'top' },
           width: 278,
           height: 278,
-           colors: ['#57b0eb', '#fc8f3e']
+          backgroundColor: 'transparent',
+          colors: ['#57b0eb', '#fc8f3e']
         };
 
       var chart = new google.visualization.LineChart(document.getElementById('drawChartInvoice'));
@@ -116,3 +119,9 @@ $(window).scroll(function() {
     a = 1;
   }
 });
+
+$(window).resize(function(){
+      drawChartProjects();
+      drawChartRunning();
+      drawChartInvoice();
+  });
