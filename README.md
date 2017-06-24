@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Projeto Final do Curso Certificação Bootstrap</title>
-</head>
 <body>
 <h1>Projeto Final do Curso Certificação Bootstrap</h1>
 
@@ -20,17 +14,21 @@
 	<li>Google Charts</li>
 </ul>
 
+<p>Necessário ter instalado o node.js em sua máquina: (https://nodejs.org/en/)</p>
 
-	
+<ul>
+	<ol>
+		git clone https://github.com/quinalia/projetofinalcertificacaobootstrap.git
+	</ol>
+	<ol>
+		npm install (instalar a pasta node_modules)
+	</ol>
+	<ol>
+		gulp (utilize este comando para rodar as task do arquivo gulpfile.js)
+	</ol>
+</ul>
 </body>
 </html>
 
 
-Necessário ter instalado o node.js em sua máquina: (https://nodejs.org/en/)
-
-git clone https://github.com/quinalia/projetofinalcertificacaobootstrap.git
-
-npm install (instalar a pasta node_modules)
-
-gulp (utilize este comando para rodar as task do arquivo gulpfile.js)
 
