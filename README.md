@@ -18,13 +18,13 @@
 
 <ul>
 	<ol>
-		git clone https://github.com/quinalia/projetofinalcertificacaobootstrap.git
+		1) git clone https://github.com/quinalia/projetofinalcertificacaobootstrap.git
 	</ol>
 	<ol>
-		npm install (instalar a pasta node_modules)
+		2) npm install (instalar a pasta node_modules)
 	</ol>
 	<ol>
-		gulp (utilize este comando para rodar as task do arquivo gulpfile.js)
+		3) gulp (utilize este comando para rodar as task do arquivo gulpfile.js)
 	</ol>
 </ul>
 </body>
