@@ -13,7 +13,7 @@
 	<li>Bootstrap v4.0.0-alpha.6</li>
 	<li>Google Charts</li>
 </ul>
-
+<h3>Para utilizar o projeto necessário seguir os passos abaixo em seu terminal(linux) ou cmd(windows):</h3>
 <p>Necessário ter instalado o node.js em sua máquina: (https://nodejs.org/en/)</p>
 
 <ul>
