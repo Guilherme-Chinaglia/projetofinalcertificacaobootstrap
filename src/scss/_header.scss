@@ -6,30 +6,43 @@
 
 	width: 100%;
 	height: $height-header-itens;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+
+	
 	padding: .5rem 1rem;
 
 	background-color: #fff;
 	box-shadow: 0 5px 15px -2px rgba(0,0,0,.4);
-	
-	.offcanvas .item{
-		font-size: 2rem;
-	}
 
-	.date-timer{
-		
+	.container-div{
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
 
-		> p{
-			margin-bottom: 0;
-			margin: 0 .3rem;
-		 	font-size: .8rem;
+		@include media-breakpoint-up(lg) { 
+			width: 90%;
+		}		
+
+		.offcanvas{ 
+			@include media-breakpoint-up(lg) { 
+				display: none;
+			}		
+			.item{
+				font-size: 2rem;
+			}
 		}
 
-		.mark{
-			color: $brand-warning;
+	.date-timer{
+		display: flex;
+
+			> p{
+				margin-bottom: 0;
+				margin: 0 .3rem;
+			 	font-size: .8rem;
+			}
+
+			.mark{
+				color: $brand-warning;
+			}
 		}
 	}
 }

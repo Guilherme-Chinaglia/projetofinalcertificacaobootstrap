@@ -84,7 +84,7 @@ gulp.task("move-fonts", function(){
 });
 
 /* Task server local */
-gulp.task("server", function() {
+gulp.task("server", function() {  
 	browserSync.init({
 		server: {
 			baseDir: "./dist"
