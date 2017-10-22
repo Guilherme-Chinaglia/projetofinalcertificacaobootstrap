@@ -1,4 +1,3 @@
-<body>
 <h1>Projeto Final do Curso Certificação Bootstrap</h1>
 
 <h4>Projeto final do curso Certificação Bootstrap ministrado por <a href="https://github.com/kevenjesus">Keven Jesus</a>
@@ -27,8 +26,6 @@
 		3) gulp (utilize este comando para rodar as task do arquivo gulpfile.js)
 	</ol>
 </ul>
-</body>
-</html>
 
 
 
